@@ -25,7 +25,8 @@ from fastmcp import FastMCP
 mcp = FastMCP("GE RuneScape")
 
 # A Wiki pede um User-Agent descritivo. Troca pelo teu contacto.
-HEADERS = {"User-Agent": "ge-runescape-mcp - projeto pessoal - o-teu-email@exemplo.com"}
+HEADERS = {"User-Agent": os.environ.get("CONTACTO_UA", "ge-runescape-mcp - choks97 on discord")}
+
 
 OSRS = "https://prices.runescape.wiki/api/v1/osrs"  # tempo real, só OSRS
 WG = "https://api.weirdgloop.org/exchange/history"  # Weird Gloop, RS3 e OSRS
